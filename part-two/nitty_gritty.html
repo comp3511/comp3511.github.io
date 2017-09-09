@@ -1,0 +1,571 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Pthread In-depth · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="safety.html" />
+    
+    
+    <link rel="prev" href="pthread.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Inter-process Communication</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../part-one/">
+            
+                <a href="../part-one/">
+            
+                    
+                    Inter-process Communication
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../part-one/shm.html">
+            
+                <a href="../part-one/shm.html">
+            
+                    
+                    Shared Memory
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../part-one/socket.html">
+            
+                <a href="../part-one/socket.html">
+            
+                    
+                    Unix Socket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../part-one/msg-queue.html">
+            
+                <a href="../part-one/msg-queue.html">
+            
+                    
+                    Message Queue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../part-one/mmap.html">
+            
+                <a href="../part-one/mmap.html">
+            
+                    
+                    Memory Map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="../part-one/task.html">
+            
+                <a href="../part-one/task.html">
+            
+                    
+                    Assignment One
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Multithreading</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Multithreading
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="pthread.html">
+            
+                <a href="pthread.html">
+            
+                    
+                    Introduction to Pthread
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.1.2" data-path="nitty_gritty.html">
+            
+                <a href="nitty_gritty.html">
+            
+                    
+                    Pthread In-depth
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="safety.html">
+            
+                <a href="safety.html">
+            
+                    
+                    Thread Safety
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="task.html">
+            
+                <a href="task.html">
+            
+                    
+                    Assignment Two
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Synchronization</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../part-three/">
+            
+                <a href="../part-three/">
+            
+                    
+                    Synchronization
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../part-three/mutex.html">
+            
+                <a href="../part-three/mutex.html">
+            
+                    
+                    Mutex
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../part-three/semaphore.html">
+            
+                <a href="../part-three/semaphore.html">
+            
+                    
+                    Semaphore
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../part-three/task.html">
+            
+                <a href="../part-three/task.html">
+            
+                    
+                    Assignment Three
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../reference.html">
+            
+                <a href="../reference.html">
+            
+                    
+                    Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Pthread In-depth</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="pthread-in-depth">Pthread In-depth</h2>
+<p>There are more to using <strong>Pthread</strong> than just <code>pthread_create()</code> and <code>pthread_join()</code>. In this chapter we will be going through <code>pthread_exit()</code> ,<code>pthread_cancel()</code> ,<code>pthread_equal()</code> and some of the problems that we might encounter while using thread in our program.</p>
+<h2 id="returning-status-and-memory">Returning Status and Memory</h2>
+<p>Sometimes you specifically want to wait for a thread to exit. Perhaps you&#x2019;ve created 20 threads to do 20 pieces of a task and you can&#x2019;t continue until they are all finished. One way to do this, is to call the wait (in POSIX, join) function on each of the desired thread IDs. The caller will block until each of the specified threads has exited. The other way is to use normal synchronization functions.</p>
+<p><img src="../assets/return_status.png" alt="Using pthread_join() and pthread_exit()"></p>
+<h3 id="pthreadexit"><code>pthread_exit()</code></h3>
+<p><code>void pthread_exit(void *value_ptr);</code></p>
+<p>The <code>pthread_exit()</code> function terminates the calling thread, making its exit status available to any waiting threads. Normally, a thread terminates by returning from the start routine that was specified in the <code>pthread_create()</code> call which started it. An implicit call to <code>pthread_exit()</code> occurs when any thread returns from its start routine. (With the exception of the initial thread, at which time an implicit call to exit() occurs). The <code>pthread_exit()</code> function provides an interface similar to exit() but on a per-thread basis.</p>
+<pre><code>int main() {
+  pthread_t tid1, tid2;
+  pthread_create(&amp;tid1, NULL, some_func, &quot;value1&quot;);
+  pthread_create(&amp;tid2, NULL, some_func, &quot;value2&quot;);
+  pthread_exit(NULL); 
+
+  // No code is run after pthread_exit
+  // However process will continues until both threads have finished
+}
+</code></pre><h3 id="pthreadcancel"><code>pthread_cancel()</code></h3>
+<p><code>int pthread_cancel(pthread_t thread);</code></p>
+<p><code>pthread_cancel()</code> requests cancelation of the target thread. The target thread will be cancel according to its cancelability state. As shown in the table below:</p>
+<table>
+<thead>
+<tr>
+<th>Cancelability</th>
+<th>State</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Disabled</td>
+<td><code>PTHREAD_CANCEL_DISABLE</code></td>
+<td><code>PTHREAD_CANCEL_DEFERRED</code></td>
+</tr>
+<tr>
+<td>Disabled</td>
+<td><code>PTHREAD_CANCEL_DISABLE</code></td>
+<td><code>PTHREAD_CANCEL_ASYNCHRONOUS</code></td>
+</tr>
+<tr>
+<td>Deferred</td>
+<td><code>PTHREAD_CANCEL_DISABLE</code></td>
+<td><code>PTHREAD_CANCEL_DEFERRED</code></td>
+</tr>
+<tr>
+<td>Asynchronous</td>
+<td><code>PTHREAD_CANCEL_DISABLE</code></td>
+<td><code>PTHREAD_CANCEL_ASYNCHRONOUS</code></td>
+</tr>
+</tbody>
+</table>
+<p>The default cancelability state is deferred.</p>
+<p>When cancelability is disabled, all cancels are held pending in the target thread until the thread changes the cancelability. When cancelability is deferred, all cancels are held pending in the target thread until the thread changes the cancelability, calls a function which is a cancelation point or calls <code>pthread_testcancel()</code>, thus creating a cancelation point. When cancelability is <strong>asynchronous</strong>, all cancels are acted upon immediately, interrupting the thread with its processing.</p>
+<p>In practice, <code>pthread_cancel()</code> is rarely used because it does not give a thread an opportunity to clean up after itself (for example, it may have opened some files). An alternative implementation is to use a boolean (int) variable whose value is used to inform other threads that they should finish and clean up.</p>
+<h3 id="pthreadequal"><code>pthread_equal()</code></h3>
+<p><code>int pthread_equal(pthread_t t1, pthread_t t2);</code></p>
+<p><code>pthread_equal()</code> compares two Pthread and returns an integer value to indicate the equality, a non-zero value will be return if <code>t1</code> and <code>t2</code> are equal, <code>0</code> will return otherwise.</p>
+<pre><code>#include &lt;pthread.h&gt;
+#include &lt;stdio.h&gt;
+
+pthread_t global;
+
+void *target(void *arg)
+{
+    printf(&quot;Away from main thread now...\n&quot;);
+    global = pthread_self();
+    return NULL;
+}
+
+int main(int argc, char **argv)
+{
+    pthread_t tid;
+
+    if(pthread_create(&amp;thread, NULL, target, NULL) != 0)
+    {
+        perror(&quot;Error while creating threads&quot;);
+        exit(1);
+    }
+
+    if (!pthread_equal(tid, global)) {
+        perror(&quot;Undefined behaviour occurred while comparing threads.&quot;);
+        exit(1);
+     }
+
+     printf(&quot;Both threads are the same&quot;);
+
+    return 0;
+}
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="pthread.html" class="navigation navigation-prev " aria-label="Previous page: Introduction to Pthread">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="safety.html" class="navigation navigation-next " aria-label="Next page: Thread Safety">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Pthread In-depth","level":"3.1.2","depth":2,"next":{"title":"Thread Safety","level":"3.1.3","depth":2,"path":"part-two/safety.md","ref":"part-two/safety.md","articles":[]},"previous":{"title":"Introduction to Pthread","level":"3.1.1","depth":2,"path":"part-two/pthread.md","ref":"part-two/pthread.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"part-two/nitty_gritty.md","mtime":"2017-08-29T02:30:07.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-09T08:19:25.150Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

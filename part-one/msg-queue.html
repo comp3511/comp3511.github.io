@@ -1,0 +1,596 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Message Queue · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="mmap.html" />
+    
+    
+    <link rel="prev" href="socket.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Inter-process Communication</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Inter-process Communication
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="shm.html">
+            
+                <a href="shm.html">
+            
+                    
+                    Shared Memory
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="socket.html">
+            
+                <a href="socket.html">
+            
+                    
+                    Unix Socket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.1.3" data-path="msg-queue.html">
+            
+                <a href="msg-queue.html">
+            
+                    
+                    Message Queue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="mmap.html">
+            
+                <a href="mmap.html">
+            
+                    
+                    Memory Map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="task.html">
+            
+                <a href="task.html">
+            
+                    
+                    Assignment One
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Multithreading</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../part-two/">
+            
+                <a href="../part-two/">
+            
+                    
+                    Multithreading
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../part-two/pthread.html">
+            
+                <a href="../part-two/pthread.html">
+            
+                    
+                    Introduction to Pthread
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../part-two/nitty_gritty.html">
+            
+                <a href="../part-two/nitty_gritty.html">
+            
+                    
+                    Pthread In-depth
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="../part-two/safety.html">
+            
+                <a href="../part-two/safety.html">
+            
+                    
+                    Thread Safety
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="../part-two/task.html">
+            
+                <a href="../part-two/task.html">
+            
+                    
+                    Assignment Two
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Synchronization</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../part-three/">
+            
+                <a href="../part-three/">
+            
+                    
+                    Synchronization
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../part-three/mutex.html">
+            
+                <a href="../part-three/mutex.html">
+            
+                    
+                    Mutex
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../part-three/semaphore.html">
+            
+                <a href="../part-three/semaphore.html">
+            
+                    
+                    Semaphore
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../part-three/task.html">
+            
+                <a href="../part-three/task.html">
+            
+                    
+                    Assignment Three
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../reference.html">
+            
+                <a href="../reference.html">
+            
+                    
+                    Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Message Queue</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="message-queues">Message Queues</h1>
+<p><strong>Message Queues</strong> is yet another way for IPC to take place in Unix-like Operating Systems. Messages that being send to the queue works in a <strong>FIFO</strong> manner, each message queue is uniquely identifiable via the use of <code>key_t</code> variable containing a numeric value. A process can instantiate a new message queue or connect to an existing queue, hence allowing multiple processes can access the information in the queue simultaneously.</p>
+<p>A message queue can be created with the following system call:</p>
+<p><code>int msgget(key_t key, int msgflg);</code></p>
+<p>Where <code>msgget()</code> returns the message queue id on success, otherwise <code>-1</code> if it sets off an error.
+Arguments that are being pass to the system call are a system-wide unique identifier (for creating and connecting to the queue) and a bit flag to control the permission of the message queue.</p>
+<p>Once a message queue has been created, the process is ready to send and receive messages. However, there is one caveat which is the format for the message. Each message is divided into two parts, the type of message and the content of the message itself. Note that the <code>message_text</code> can be a structure itself if you would like to store some meta data.</p>
+<pre><code>struct message_buffer 
+{
+    long message_type;
+    char message_text;    
+}
+</code></pre><h3 id="msgsnd"><code>msgsnd()</code></h3>
+<p>So after we have formatted the message, we can utilise the next system call function to actually send the message.</p>
+<p><code>int msgsnd(int id, const void *msg_ptr, size_t msg_size, int msg_flag);</code></p>
+<p>Usage for this function is to first pass the message queue id returned by <code>msgget()</code> as a parameter, and a pointer that points to the address of your <em>formatted message</em> and its size, it can be obtained by calling <code>sizeof(message_buffer)</code> for instance and finally the bit flag for message permissions.</p>
+<h3 id="msgrcv"><code>msgrcv()</code></h3>
+<p>On the receiving end, you would first join the message queue by calling <code>msgget()</code> and do the following system call:</p>
+<p><code>int msgrcv(int id, void *msg_ptr, size_t msg_size, long msg_type, int msg_flag);</code> </p>
+<p>The return value of <code>msgrcv</code> is an integer value that indicates whether the message is received, <code>-1</code> meaning there is an error occurred and the number of bytes received otherwise.</p>
+<h2 id="example">Example</h2>
+<h3 id="sender">Sender</h3>
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;errno.h&gt;
+#include &lt;string.h&gt;
+#include &lt;sys/types.h&gt;
+#include &lt;sys/ipc.h&gt;
+#include &lt;sys/msg.h&gt;
+
+struct my_msgbuf {
+    long mtype;
+    char mtext[200];
+};
+
+int main(void)
+{
+    struct my_msgbuf buf;
+    int msqid;
+    key_t key;
+
+    if ((key = ftok(&quot;sender.c&quot;, &apos;B&apos;)) == -1) {
+        perror(&quot;ftok&quot;);
+        exit(1);
+    }
+
+    if ((msqid = msgget(key, 0644 | IPC_CREAT)) == -1) {
+        perror(&quot;msgget&quot;);
+        exit(1);
+    }
+
+    printf(&quot;Enter lines of text, ^D to quit:\n&quot;);
+
+    buf.mtype = 1; /* we don&apos;t really care in this case */
+
+    while(fgets(buf.mtext, sizeof buf.mtext, stdin) != NULL) {
+        int len = strlen(buf.mtext);
+
+        /* ditch newline at end, if it exists */
+        if (buf.mtext[len-1] == &apos;\n&apos;) buf.mtext[len-1] = &apos;\0&apos;;
+
+        if (msgsnd(msqid, &amp;buf, len+1, 0) == -1) /* +1 for &apos;\0&apos; */
+            perror(&quot;msgsnd&quot;);
+    }
+
+    if (msgctl(msqid, IPC_RMID, NULL) == -1) {
+        perror(&quot;msgctl&quot;);
+        exit(1);
+    }
+
+    return 0;
+}
+</code></pre><h3 id="receiver">Receiver</h3>
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;errno.h&gt;
+#include &lt;sys/types.h&gt;
+#include &lt;sys/ipc.h&gt;
+#include &lt;sys/msg.h&gt;
+
+struct my_msgbuf {
+    long mtype;
+    char mtext[200];
+};
+
+int main(void)
+{
+    struct my_msgbuf buf;
+    int msqid;
+    key_t key;
+
+    if ((key = ftok(&quot;sender.c&quot;, &apos;B&apos;)) == -1) {  /* same key as sender.c */
+        perror(&quot;ftok&quot;);
+        exit(1);
+    }
+
+    if ((msqid = msgget(key, 0644)) == -1) { /* connect to the queue */
+        perror(&quot;msgget&quot;);
+        exit(1);
+    }
+
+    printf(&quot;ready to receive messages.\n&quot;);
+
+    while(true) {
+        if (msgrcv(msqid, &amp;buf, sizeof buf.mtext, 0, 0) == -1) {
+            perror(&quot;msgrcv&quot;);
+            exit(1);
+        }
+        printf(&quot;content: \&quot;%s\&quot;\n&quot;, buf.mtext);
+    }
+
+    return 0;
+}
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="socket.html" class="navigation navigation-prev " aria-label="Previous page: Unix Socket">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="mmap.html" class="navigation navigation-next " aria-label="Next page: Memory Map">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Message Queue","level":"2.1.3","depth":2,"next":{"title":"Memory Map","level":"2.1.4","depth":2,"path":"part-one/mmap.md","ref":"part-one/mmap.md","articles":[]},"previous":{"title":"Unix Socket","level":"2.1.2","depth":2,"path":"part-one/socket.md","ref":"part-one/socket.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"part-one/msg-queue.md","mtime":"2017-09-04T06:47:30.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-09T08:19:25.150Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
